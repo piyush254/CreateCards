@@ -1,0 +1,60 @@
+.main {
+  display: flex;
+}
+.handf {
+  width: 100%;
+ 
+
+}
+.Cards {
+  /* background-color: #7d3e3e; */
+  /* display: flex;
+  flex-wrap: wrap; */
+  overflow: scroll;
+  height: 70vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  justify-content: space-around;
+  background-color: RGBA(
+    var(--bs-dark-rgb),
+    var(--bs-bg-opacity, 1)
+  ) !important;
+  border-left: 1px solid rgb(164, 159, 159);
+  border-top: 1px solid rgb(164, 159, 159);
+}
+
+.foot {
+  position: sticky;
+  bottom: 0%;
+}
+
+/* text-bg-dark {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-dark-rgb),var(--bs-bg-opacity,1)) !important;
+} */
+.post-card {
+  margin-top: 1.25rem;
+  margin-left: 3rem;
+  
+}
+.hastag {
+  margin: 0px 2px;
+}
+.reaction {
+  margin: 3rem 0rem 0rem 0rem;
+}
+.CreateCard {
+  width: 70%;
+  margin-top: 3.125rem;
+  margin-left: 3.125rem;
+  
+}
+.alignmentoftext {
+
+ float: right;
+}
+
+.home{
+  float: left;
+  margin-top: 4%;
+}
