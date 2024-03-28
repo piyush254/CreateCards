@@ -20,7 +20,7 @@ function App() {
         <Sidebar item={item} setItem={setItem} />
         <div className="handf">
           <Header />
-          {item == "Home" ? <Cards /> : <CreateCard  setItem={setItem} />}
+          {item == "Home" ? <Cards   /> : <CreateCard  setItem={setItem} />}
         </div>
       </div>
           <Footer />

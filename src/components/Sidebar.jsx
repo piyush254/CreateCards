@@ -52,53 +52,11 @@ function Sidebar({ item, setItem }) {
               <use xlinkHref="#speedometer2"></use>
             </svg>
             Create
-            Card
+            Post
           </a>
         </li>
       </ul>
       <hr />
-      <div className="dropdown">
-        <a
-          href="#"
-          className="d-flex align-items-center text-white text-decoration-none dropdown-toggle docs-creator"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img
-            src="https://images.pexels.com/photos/20449623/pexels-photo-20449623/free-photo-of-a-real-eye-catching-leopard.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            alt=""
-            width="32"
-            height="32"
-            className="rounded-circle me-2"
-          />
-          <strong>user</strong>
-        </a>
-        <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-          <li>
-            <a className="dropdown-item docs-creator" href="#">
-              New project...
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item docs-creator" href="#">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item docs-creator" href="#">
-              Profile
-            </a>
-          </li>
-          <li>
-            <hr className="dropdown-divider" />i am
-          </li>
-          <li>
-            <a className="dropdown-item docs-creator" href="#">
-              Sign out
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
   );
 }

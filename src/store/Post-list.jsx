@@ -3,6 +3,7 @@ import { createContext, useReducer } from "react";
 const defaultContext = {
   postList: [],
   addPost: () => {},
+  addInitialPosts : () =>{},
   deletePost: () => {},
 };
 
@@ -12,6 +13,8 @@ const postListReducer = (currPostList, action) => {
   let newCard = currPostList;
   if (action.type == "DeletePost") {
     newCard = currPostList.filter((card) => card.id !== action.payLoad.cardId);
+  }else if(action.type == "ADD_INITIAL_POSTS"){
+    newCard = action.payLoad.posts;
   }else if(action.type == "ADD_Post"){
     newCard = [action.payLoad,...currPostList]
   }
@@ -19,8 +22,7 @@ const postListReducer = (currPostList, action) => {
 };
 const PostListProvider = ({ children }) => {
   const [postList, dispatchpostList] = useReducer(
-    postListReducer,
-    default_Post_List
+    postListReducer,[]
   );
   const addPost = (userid,title,reaction,body,tags) => {
     dispatchpostList({
@@ -29,9 +31,17 @@ const PostListProvider = ({ children }) => {
         id: Date.now(),
         title: title,
         body: body,
-        numberOflikes: reaction,
+        reactions: reaction,
         userId: userid,
         tags : tags,
+      },
+    });
+  };
+   const addInitialPosts = (posts) => {
+    dispatchpostList({
+      type: "ADD_INITIAL_POSTS",
+      payLoad: {
+      posts
       },
     });
   };
@@ -50,28 +60,12 @@ const PostListProvider = ({ children }) => {
         postList: postList,
         addPost: addPost,
         deletePost: deletePost,
+        addInitialPosts : addInitialPosts
       }}
     >
       {children}
     </PostList.Provider>
   );
 };
-const default_Post_List = [
-  {
-    id: 1,
-    title: "Going to Maldives",
-    body: "Hi friend i am going to vaccation for enjoying a lot",
-    numberOflikes: 200,
-    userId: "user1",
-    tags: ["vaccation", "Doing fun", "Alot of joy"],
-  },
-  {
-    id: 2,
-    title: "Doing web",
-    body: "Web dev  if very fun for life let make something new here",
-    numberOflikes: 15,
-    userId: "user10",
-    tags: ["Development", "web is fun"],
-  },
-];
+
 export default PostListProvider;

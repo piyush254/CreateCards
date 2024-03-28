@@ -3,15 +3,13 @@
 }
 .handf {
   width: 100%;
- 
-
 }
 .Cards {
   /* background-color: #7d3e3e; */
   /* display: flex;
   flex-wrap: wrap; */
   overflow: scroll;
-  height: 70vh;
+  height: 75vh;
   scrollbar-width: none;
   -ms-overflow-style: none;
   justify-content: space-around;
@@ -26,6 +24,7 @@
 .foot {
   position: sticky;
   bottom: 0%;
+  box-sizing: content-box;;
 }
 
 /* text-bg-dark {
@@ -50,11 +49,21 @@
   
 }
 .alignmentoftext {
-
  float: right;
 }
 
 .home{
   float: left;
   margin-top: 4%;
+}
+.text-bg-dark{
+  box-sizing: content-box;
+}
+.sizzing{
+  box-sizing: border-box;
+}
+.welcome{
+  color: rgb(153, 121, 121);
+  margin: 15%  0px;
+  
 }

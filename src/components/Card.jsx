@@ -5,7 +5,7 @@ import { MdDeleteForever } from "react-icons/md";
 function Card({card}) {
   const {deletePost} = useContext(PostList)
   return (
-    <div className="card post-card" style={{ width: "29rem", height: "20rem" }}>
+    <div className="card post-card" style={{ width: "40rem", height: "20rem" }}>
       <div className="card-body">
         <h5 className="card-title">{card.title}</h5>
         <p className="card-text">{card.body}</p>
@@ -17,7 +17,7 @@ function Card({card}) {
           <MdDeleteForever />
         </span>
         <div className="alert alert-dark reaction" role="alert">
-          This post has been reacted by {card.numberOflikes} people
+          This post has been reacted by {card.reactions} people
         </div>
       </div>
     </div>

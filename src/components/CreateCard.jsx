@@ -16,8 +16,8 @@ function CreateCard({setItem}) {
     const userid = useridElement.current.value;
     const title = titleElement.current.value;
     const reaction = reactionsElement.current.value;
-    const body = TagsElement.current.value;
-    const tags = bodyElement.current.value.split(" ");
+    const body = bodyElement.current.value;
+    const tags = TagsElement.current.value.split(" ");
 
     useridElement.current.value = "";
     titleElement.current.value = "";
