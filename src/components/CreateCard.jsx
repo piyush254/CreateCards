@@ -7,7 +7,7 @@ function CreateCard({setItem}) {
 
   const useridElement = useRef();
   const titleElement = useRef();
-  const reactionsElement = useRef();
+  const likesElement = useRef();
   const TagsElement = useRef();
   const bodyElement = useRef();
 
@@ -15,19 +15,19 @@ function CreateCard({setItem}) {
     event.preventDefault();
     const userid = useridElement.current.value;
     const title = titleElement.current.value;
-    const reaction = reactionsElement.current.value;
+    const likes = likesElement.current.value;
     const body = bodyElement.current.value;
     const tags = TagsElement.current.value.split(" ");
 
     useridElement.current.value = "";
     titleElement.current.value = "";
-    reactionsElement.current.value = "";
+    likesElement.current.value = "";
     TagsElement.current.value = "";
     bodyElement.current.value = "";
     if(confirm("Do you want to go on home page")){
       setItem("Home")
     }
-    addPost(userid, title, reaction, body, tags);
+    addPost(userid, title, likes , body, tags);
   };
 
   return (
@@ -57,15 +57,15 @@ function CreateCard({setItem}) {
         />
       </div>
       <div className="mb-3 ">
-        <label htmlFor="reactions" className="form-label">
-          No. of Reactions
+        <label htmlFor="likes" className="form-label">
+          No. of likes
         </label>
         <input
           type="text"
-          ref={reactionsElement}
+          ref={likesElement}
           className="form-control"
-          id="reaction"
-          placeholder="How many reaction you want on your post"
+          id="like"
+          placeholder="How many like you want on your post"
         />
       </div>{" "}
       <div className="mb-3 ">

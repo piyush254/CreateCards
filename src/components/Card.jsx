@@ -17,7 +17,7 @@ function Card({card}) {
           <MdDeleteForever />
         </span>
         <div className="alert alert-dark reaction" role="alert">
-          This post has been reacted by {card.reactions} people
+          This post has been liked by {card.reactions.likes}  people
         </div>
       </div>
     </div>

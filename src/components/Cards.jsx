@@ -11,6 +11,7 @@ const Cards = () => {
     .then(res => res.json())
     .then(data =>{
       addInitialPosts(data.posts)
+      console.log(data.posts);
     } );
   }
   

@@ -24,14 +24,16 @@ const PostListProvider = ({ children }) => {
   const [postList, dispatchpostList] = useReducer(
     postListReducer,[]
   );
-  const addPost = (userid,title,reaction,body,tags) => {
+  const addPost = (userid,title,likes,body,tags) => {
     dispatchpostList({
       type: "ADD_Post",
       payLoad: {
         id: Date.now(),
         title: title,
         body: body,
-        reactions: reaction,
+        reactions: {
+          likes: likes
+        },
         userId: userid,
         tags : tags,
       },
