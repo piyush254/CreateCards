@@ -1,46 +1,32 @@
-.main {
-  display: flex;
-}
-.handf {
-  width: 100%;
+*{
+  scrollbar-width: none;
 }
 .Cards {
-  /* background-color: #7d3e3e; */
-  /* display: flex;
-  flex-wrap: wrap; */
+  background-color: #7d3e3e;
+  display: flex;
+  max-width: 100vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  box-sizing: border-box;
+  flex-wrap: wrap;
   overflow: scroll;
-  height: 75vh;
+  height: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   justify-content: space-around;
-  background-color: RGBA(
-    var(--bs-dark-rgb),
-    var(--bs-bg-opacity, 1)
-  ) !important;
-  border-left: 1px solid rgb(164, 159, 159);
-  border-top: 1px solid rgb(164, 159, 159);
+  border: 2px solid rgb(164, 159, 159);
 }
 
-.foot {
-  position: sticky;
-  bottom: 0%;
-  box-sizing: content-box;;
-}
-
-/* text-bg-dark {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-dark-rgb),var(--bs-bg-opacity,1)) !important;
-} */
 .post-card {
   margin-top: 1.25rem;
-  margin-left: 3rem;
-  
+  max-width: 90vw; 
 }
 .hastag {
   margin: 0px 2px;
 }
 .reaction {
   margin: 3rem 0rem 0rem 0rem;
+  /* display: none; */
 }
 .CreateCard {
   width: 70%;
@@ -64,6 +50,65 @@
 }
 .welcome{
   color: rgb(153, 121, 121);
-  margin: 15%  0px;
-  
+  margin: 15%  0px; 
+}
+
+/* General card styles */
+.custom-card {
+  max-width: 35rem;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-card-body {
+  padding: 1.5rem;
+}
+
+.custom-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.custom-card-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.custom-card-tags {
+  margin-bottom: 1rem;
+}
+
+.custom-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.custom-delete-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  color: #ff4d4d;
+  font-size: 1.5rem;
+}
+
+.custom-reaction {
+  background-color: #e6e6e7;
+  color: #333;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 1rem;
 }

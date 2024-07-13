@@ -1,5 +1,5 @@
 import React, { useContext, useReducer, useRef } from "react";
-
+import "./CreateCard.css"
 import { PostList } from "../store/Post-list";
 
 function CreateCard({setItem}) {

@@ -1,34 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { IoMdHome } from "react-icons/io";
+import "./Header.css";
 
-function Header() {
+function Header({ item, setItem }) {
+  const optionChanger = (e) => {
+    setItem(e.currentTarget.id);
+  };
+
   return (
-    <header className="p-3 text-bg-dark">
-    <div className="container">
-      <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none docs-creator">
-          <svg className="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlinkHref="#bootstrap"></use></svg>
-        </a>
-
-        <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" className="nav-link px-2 text-secondary docs-creator">Home</a></li>
-          <li><a href="#" className="nav-link px-2 text-white docs-creator">Features</a></li>
-          <li><a href="#" className="nav-link px-2 text-white docs-creator">Pricing</a></li>
-          <li><a href="#" className="nav-link px-2 text-white docs-creator">FAQs</a></li>
-          <li><a href="#" className="nav-link px-2 text-white docs-creator">About</a></li>
+    <>
+      <header className="custom-header">
+        <ul className="custom-nav">
+          <li className="custom-nav-item" onClick={optionChanger} id="Home">
+            <a
+              href="#"
+              className={`custom-nav-link ${item === "Home" && "active"}`}
+              aria-current="page"
+            >
+              Home
+            </a>
+          </li>
+          <li className="custom-nav-item" id="Create Card" onClick={optionChanger}>
+            <a
+              href="#"
+              className={`custom-nav-link ${item === "Create Card" && "active"}`}
+            >
+              Create Post
+            </a>
+          </li>
         </ul>
-
-        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" className="form-control form-control-dark text-bg-dark sizzing" placeholder="Search..." aria-label="Search" />
-        </form>
-
-        <div className="text-end">
-          <button type="button" className="btn btn-outline-light me-2">Login</button>
-          <button type="button" className="btn btn-warning">Sign-up</button>
-        </div>
-      </div>
-    </div>
-  </header>
-  )
+      </header>
+    </>
+  );
 }
 
-export default Header
+export default Header;

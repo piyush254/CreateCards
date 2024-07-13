@@ -14,18 +14,15 @@ function App() {
   const [item, setItem] = useState("Home");
   // const [item, setItem] = useState("Create Card");
   return (
-    < PostListProvider>
-    <div>
-      <div className="main">
-        <Sidebar item={item} setItem={setItem} />
+    <PostListProvider>
+      <div>
         <div className="handf">
-          <Header />
-          {item == "Home" ? <Cards   /> : <CreateCard  setItem={setItem} />}
+          <Header item={item} setItem={setItem} />
+          {item == "Home" ? <Cards /> : <CreateCard setItem={setItem} />}
+          <Footer />
         </div>
       </div>
-          <Footer />
-    </div>
-    </ PostListProvider>
+    </PostListProvider>
   );
 }
 
