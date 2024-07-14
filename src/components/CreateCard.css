@@ -63,3 +63,8 @@
 .CreateCard {
   margin-bottom: 2rem;
 }
+
+
+.h-100{
+  height: 6rem !important;
+}

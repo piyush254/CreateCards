@@ -65,7 +65,7 @@ function CreateCard({setItem}) {
           ref={likesElement}
           className="form-control"
           id="like"
-          placeholder="How many like you want on your post"
+          placeholder="Likes you want on your post"
         />
       </div>{" "}
       <div className="mb-3 ">
@@ -77,7 +77,7 @@ function CreateCard({setItem}) {
           ref={TagsElement}
           className="form-control"
           id="Tags"
-          placeholder="Don't forget to add # tags for more reach"
+          placeholder=" Add # tags for more reach"
         />
       </div>
       <div className="mb-3 ">
@@ -87,7 +87,7 @@ function CreateCard({setItem}) {
         <textarea
           type="text"
           ref={bodyElement}
-          className="form-control"
+          className="form-control h-100"
           id="body"
           placeholder="Tell me something about your post"
         />
